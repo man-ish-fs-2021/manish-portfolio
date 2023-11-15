@@ -1,0 +1,52 @@
+.about-container {
+  max-width: 70%;
+  margin: 0 auto;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* overflow: scroll; */
+}
+.about-container > div {
+  width: 70%;
+  text-align: justify;
+}
+.about-heading {
+  font-size: 5rem;
+  margin-top: 10%;
+  align-self: center;
+  margin-bottom: 100px;
+  opacity: 0;
+
+  animation: fade-in-from-bottom cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s
+    forwards;
+  animation-delay: 0.4s;
+}
+.about-me {
+  /* transform: scaleX(0); */
+  /* transform-origin: left; */
+  animation: fade-in-from-bottom cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s
+    forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.about-heading p {
+  text-align: left;
+  margin: 0;
+}
+.about-skills {
+  opacity: 0;
+}
+.about-skills ul {
+  list-style-type: "- ";
+  /* padding: 0; */
+}
+.about-container .horizontal-line {
+  width: 70%;
+  border: 1px solid white;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.4s;
+}

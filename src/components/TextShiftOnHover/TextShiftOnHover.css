@@ -1,0 +1,19 @@
+.on-hover-text {
+  transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  font-size: 4rem;
+  color: white;
+  margin: 0;
+  transform: translateX(0);
+  width: max-content;
+}
+.on-hover-text h1 {
+  text-shadow: 0 0 50px #000;
+  margin: 0;
+}
+.on-hover-text:hover {
+  cursor: pointer;
+  /* transform: ; */
+  text-shadow: 0 0 50px #000;
+  transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transform: scale(1.01) translateX(10%);
+}

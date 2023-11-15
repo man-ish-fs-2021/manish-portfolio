@@ -1,0 +1,23 @@
+.work-exp-first-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-exp-company-name {
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+.work-exp-duration {
+  font-style: italic;
+  font-weight: 200;
+}
+.work-exp-right {
+  font-weight: 700;
+}
+.work-exp-gist p:first-child {
+  font-weight: 700;
+}
+.work-exp-gist p:nth-child(2) {
+  /* font-weight: 700; */
+  text-align: justify;
+}

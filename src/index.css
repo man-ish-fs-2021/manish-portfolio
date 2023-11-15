@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  height: 100vh;
+  width: 100vw;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.fade-in-about {
+  animation: fade-in-from-bottom cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.9s
+    forwards;
+}
+.hr-line-70 {
+  width: 70%;
+  border: 1px solid white;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.page-inner-container {
+  max-width: 70%;
+  margin: 0 auto;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.page-inner-container > div {
+  width: 70%;
+  /* text-align: justify; */
+}
+.arrow {
+  width: 100px;
+  height: 100px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  bottom: -15px;
+  margin: 0 auto;
+  animation: ArrowbobbingAbsolute 2s linear infinite;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.down {
+  transform: scaleY(cos(45deg)) rotate(45deg);
+}
