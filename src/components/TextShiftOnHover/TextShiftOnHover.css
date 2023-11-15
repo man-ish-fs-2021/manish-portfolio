@@ -3,8 +3,8 @@
   font-size: 4rem;
   color: white;
   margin: 0;
-  transform: translateX(0);
   width: max-content;
+  transform: translateX(0);
 }
 .on-hover-text h1 {
   text-shadow: 0 0 50px #000;

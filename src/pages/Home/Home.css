@@ -6,6 +6,9 @@
   background-repeat: repeat;
   position: relative;
 }
+.text-main-mobile {
+  display: none;
+}
 .text-main {
   animation: fade-in-text 1.2s ease-in-out;
   z-index: 2;
@@ -55,6 +58,48 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+.tap-anywhere-class {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .text-main {
+    display: none;
+  }
+  .text-main-mobile {
+    /* animation: fade-in-text 1.2s ease-in-out; */
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* margin-left: 15%; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-bg-img {
+    right: -30%;
+    /* top: 50%; */
+    /* right: -30%;
+    top: 15%;
+    display: none; */
+  }
+  .tap-anywhere-class {
+    display: block;
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    /* right: 50%; */
+    /* left: 50%; */
+  }
+  .tap-anywhere-class > div {
+    animation: Arrowbobbing 1.5s ease-in-out infinite;
   }
 }
 /* @keyframes fade-in-img {

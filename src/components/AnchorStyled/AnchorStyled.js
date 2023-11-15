@@ -5,19 +5,19 @@ const StyledA = styled.a`
   text-decoration: none;
   color: ${(props) => props.color};
   &:hover {
-    color: ${(props) => props.hoverColor};
+    color: ${({ $hoverColor }) => $hoverColor};
   }
 `;
 
 const AnchorStyled = ({
   href,
-  color,
+  color = "white",
   children,
   hoverColor = "white",
   ...props
 }) => {
   return (
-    <StyledA href={href} color={color} hoverColor={hoverColor} {...props}>
+    <StyledA href={href} color={color} $hoverColor={hoverColor} {...props}>
       {children}
     </StyledA>
   );

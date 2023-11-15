@@ -10,7 +10,7 @@ import { default as OuterLinkCard } from "./OuterLinkCard";
 import { default as CarouselInfinfiteLoop } from "./CarouselInfiniteLoop";
 import { default as ProjectPill } from "./ProjectCard";
 import { default as ProjectPresenter } from "./ProjectPresenter";
-
+import { default as MobileText } from "./MobileChangeOnTap";
 export {
   TextShiftOnHover,
   AnchorStyled,
@@ -24,4 +24,5 @@ export {
   CarouselInfinfiteLoop,
   ProjectPill,
   ProjectPresenter,
+  MobileText,
 };

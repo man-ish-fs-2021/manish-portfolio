@@ -19,4 +19,10 @@
   align-items: flex-end;
   justify-content: flex-end;
   right: 10%;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  .home-icon:first-child {
+    display: none;
+  }
 }

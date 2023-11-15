@@ -13,3 +13,8 @@
   font-weight: bolder;
   font-size: 4rem;
 }
+@media screen and (max-width: 767px) {
+  .work-heading {
+    font-size: 3rem;
+  }
+}
