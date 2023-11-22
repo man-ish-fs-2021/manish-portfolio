@@ -12,6 +12,28 @@ const projectsMap = {
       name: "Movies App",
       link: "https://github.com/man-ish-fs-2021/Movies-app",
     },
+    {
+      name: "Youtube Clone",
+      link: "https://github.com/man-ish-fs-2021/youtubeclone-react-ts",
+    },
+    {
+      name: "Tutorial Website Clone with Quiz",
+      link: "https://github.com/man-ish-fs-2021/TutorialAssignment",
+    },
+    {
+      name: "Tesla Clone",
+      link: "https://github.com/man-ish-fs-2021/tesla-clone",
+    },
+    {
+      name: "Space X table",
+      link: "https://github.com/man-ish-fs-2021/spacex-internship-challenge-for-man-ish-fs-2021",
+    },
+  ],
+  Python: [
+    {
+      name: "Huffam Coding",
+      link: "https://github.com/man-ish-fs-2021/huffmanCodingPython",
+    },
   ],
   "Full Stack": [
     {
