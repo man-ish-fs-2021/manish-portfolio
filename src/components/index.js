@@ -7,10 +7,11 @@ import { default as Alert } from "./Alert";
 import { default as WorkExperienceCard } from "./WorkExperienceCard";
 import { default as WorkExp } from "./WorkExp";
 import { default as OuterLinkCard } from "./OuterLinkCard";
-import { default as CarouselInfinfiteLoop } from "./CarouselInfiniteLoop";
+import { default as CarouselInfiniteLoop } from "./CarouselInfiniteLoop";
 import { default as ProjectPill } from "./ProjectCard";
 import { default as ProjectPresenter } from "./ProjectPresenter";
 import { default as MobileText } from "./MobileChangeOnTap";
+import { default as SkillsPresenter } from "./SkillsPresenter";
 export {
   TextShiftOnHover,
   AnchorStyled,
@@ -21,8 +22,9 @@ export {
   WorkExperienceCard,
   WorkExp,
   OuterLinkCard,
-  CarouselInfinfiteLoop,
+  CarouselInfiniteLoop,
   ProjectPill,
   ProjectPresenter,
   MobileText,
+  SkillsPresenter,
 };

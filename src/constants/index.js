@@ -1,3 +1,4 @@
 import { certificateCarousel } from "./ListOfCertificates";
 import { projectsMap } from "./Projects";
-export { certificateCarousel, projectsMap };
+import { skills } from "./skills";
+export { certificateCarousel, projectsMap, skills };

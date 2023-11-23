@@ -1,15 +1,16 @@
 import React, { useRef } from "react";
 import "./About.css";
 import { useIsIntersectingAnimation } from "../../hooks";
-import { AnchorStyled } from "../../components";
+import { AnchorStyled, SkillsPresenter } from "../../components";
 import Resume from "../../assets/Resume-Manish Chandra.pdf";
 
 const About = () => {
   const styleSectionRef = useRef(null);
   const aboutSectionRef = useRef(null);
+  const styleSectionRef2 = useRef(null);
   useIsIntersectingAnimation({
     mainRef: styleSectionRef,
-    allRefs: [styleSectionRef, aboutSectionRef],
+    allRefs: [styleSectionRef, aboutSectionRef, styleSectionRef2],
     classToAdd: "fade-in-about",
   });
   return (
@@ -47,6 +48,10 @@ const About = () => {
       </div>
       <div ref={styleSectionRef} className="about-skills">
         <h1>Skills</h1>
+        <SkillsPresenter />
+      </div>
+      <div ref={styleSectionRef2} className="about-skills">
+        <h1>More: </h1>
         <h2>
           <ul>
             <li>Proficient in React JS, JavaScript, Typescript and ES6+</li>
@@ -54,7 +59,10 @@ const About = () => {
               Experience with state management using Redux, Context API and
               Apollo Client GraphQL
             </li>
-            <li>Understanding of design systems within React.</li>
+            <li>
+              Understanding of design systems within React (Ant design,
+              MaterialUi)
+            </li>
             <li>
               Understanding of UI libraries and UX flows through collaborations
             </li>
