@@ -1,2 +1,3 @@
 import { default as useIsIntersectingAnimation } from "./IsIntersecting";
-export { useIsIntersectingAnimation };
+import { default as useIsHovered } from "./isHovered";
+export { useIsIntersectingAnimation, useIsHovered };

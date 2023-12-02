@@ -12,6 +12,8 @@ import { default as ProjectPill } from "./ProjectCard";
 import { default as ProjectPresenter } from "./ProjectPresenter";
 import { default as MobileText } from "./MobileChangeOnTap";
 import { default as SkillsPresenter } from "./SkillsPresenter";
+import { default as ProjectCardDetailed } from "./ProjectCardDetailed";
+import { default as ExternalArrow } from "./ExternalArrow";
 export {
   TextShiftOnHover,
   AnchorStyled,
@@ -27,4 +29,6 @@ export {
   ProjectPresenter,
   MobileText,
   SkillsPresenter,
+  ExternalArrow,
+  ProjectCardDetailed,
 };

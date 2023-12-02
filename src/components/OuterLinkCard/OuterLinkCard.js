@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./OuterLinkCard.css";
-import arrow from "../../assets/external-link.svg";
+import { ExternalArrow } from "..";
+import { useIsHovered } from "../../hooks";
 const OuterLinkCard = ({ name, link }) => {
   console.log({ link });
-  const [isHovered, setIsHovered] = useState(false);
+  const { isHovered, setIsHovered } = useIsHovered();
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
@@ -16,15 +17,7 @@ const OuterLinkCard = ({ name, link }) => {
     >
       {/* <Link to={link} href={link} target="_blank"> */}
       <div className="outer-link-card-main-heading">{name}</div>
-      <div
-        className={
-          "outer-link-card-main-arrow" + (isHovered ? " img-hover" : "")
-        }
-      >
-        <div className="outer-link-card-main-arrow-container">
-          <img src={arrow} alt="arrow" />
-        </div>
-      </div>
+      <ExternalArrow isHovered={isHovered} />
       {/* </Link> */}
     </div>
   );

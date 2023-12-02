@@ -19,6 +19,7 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+
 }
 .main-bg-img {
   /* z-index: 0; */
@@ -29,7 +30,10 @@
   width: 500px;
   /* left: 35%; */
   right: 10%;
-  top: 15%;
+  /* top: 15%; */
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   /* border: 1px solid white; */
   /* border-radius: 250px; */
 
@@ -38,7 +42,7 @@
   border-radius: 50%;
   box-shadow: 0 0 50px 5px #000;
   transform: perspective(5px) translateZ(2);
-  transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform, scale, translate;
   transition-duration: 0.3s;
   /* object-fit: cover; */
 
@@ -47,17 +51,19 @@
 }
 .main-bg-img:hover {
   box-shadow: 0 0 80px 1px #000;
-  transform: scale(1.01);
+  scale : 1.01;
+  translate: 0 -10px; 
+
 }
 
 @keyframes fade-in-text {
   0% {
     opacity: 0;
-    transform: scale(1.1);
+     scale : 1.1;
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: 1;
   }
 }
 .tap-anywhere-class {

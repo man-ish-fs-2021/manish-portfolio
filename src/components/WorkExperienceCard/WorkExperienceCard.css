@@ -1,11 +1,17 @@
 .work-experience-card-main-outer {
-  width: 340px;
-  min-height: 150px;
   position: relative;
   display: block;
   margin: 30px 0;
 
   /* z-index: 0; */
+}
+.isHorizontal {
+  width: 340px;
+  min-height: 150px;
+}
+.isVertical {
+  min-height: 340px;
+  width: 250px;
 }
 .work-experience-card-main {
   box-sizing: border-box;
@@ -21,7 +27,7 @@
   flex-direction: column;
   position: relative;
   padding: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   /* align-items: baseline; */
   /* align-items: center; */
 }

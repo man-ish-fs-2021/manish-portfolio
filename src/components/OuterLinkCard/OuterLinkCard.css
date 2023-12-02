@@ -16,28 +16,3 @@
   font-weight: bolder;
   text-align: center;
 }
-.outer-link-card-main-arrow {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all 0.4s ease-in-out;
-  opacity: 0;
-}
-.outer-link-card-main-arrow-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: rgba(118, 195, 197, 1);
-}
-.outer-link-card-main-arrow-container img {
-  height: 60%;
-  width: 60%;
-}
-.img-hover {
-  transition: all 0.5 ease-in-out;
-
-  opacity: 1;
-}

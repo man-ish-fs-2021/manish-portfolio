@@ -1,0 +1,35 @@
+.project-details-card-container {
+  perspective: 40px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.project-details-card-container:hover {
+  cursor: pointer;
+}
+.project-details-card-name {
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+}
+.project-details-card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.project-details-card-skills > :not(:last-child)::after {
+  padding-left: 10px;
+  content: "|";
+}
+.project-details-card-desc {
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+.project-details-card-inner-container {
+  /* height: 200px; */
+  /* width: 200px; */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+}

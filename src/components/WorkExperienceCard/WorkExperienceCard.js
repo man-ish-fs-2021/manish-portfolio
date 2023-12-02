@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import "./WorkExperienceCard.css";
 
-const WorkExperienceCard = ({ width, height, children }) => {
+const WorkExperienceCard = ({
+  width,
+  height,
+  children,
+  isVertical = false,
+}) => {
   const [isMouseEnter, setIsMouseEnter] = useState(false);
   return (
-    <div style={{ width, height }} className="work-experience-card-main-outer">
+    <div
+      style={{ width, height }}
+      className={
+        "work-experience-card-main-outer" +
+        ` ${isVertical ? "isVertical" : "isHorizontal"}`
+      }
+    >
       <div
         onMouseEnter={() => setIsMouseEnter(true)}
         onMouseLeave={() => setIsMouseEnter(false)}
