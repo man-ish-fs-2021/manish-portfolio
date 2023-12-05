@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { Home, About, Contact, Work } from "./";
+import { Home, About, Contact, Work, Project } from "./";
 import { CommonFooterAndHome } from "../components";
 
 const Router = () => {
@@ -21,7 +21,9 @@ const Router = () => {
         <Route exact path="/work">
           <Work />
         </Route>
-        {/* <Route path="*" component={<>not available</>} /> */}
+        <Route path="/work/:id">
+          <Project />
+        </Route>
       </CommonFooterAndHome>
     </Switch>
   );

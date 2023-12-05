@@ -19,6 +19,7 @@ const certificateCarousel = [
     name: "Coding ninjas - Back End",
     link: "https://certificate.codingninjas.com/view/50acf6d20b44fe53",
   },
+
   {
     name: "FrontendExpert by AlgoExpert",
     link: "https://certificate.algoexpert.io/FrontendExpert%20Certificate%20FE-87c6340715",
