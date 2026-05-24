@@ -1,0 +1,221 @@
+.work-experience-card-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(6, 10, 18, 0.34);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  animation: work-modal-backdrop-enter 0.2s ease-out forwards;
+}
+.work-experience-card-modal-shell {
+  position: fixed;
+  top: 47%;
+  left: 50%;
+  width: min(620px, calc(100vw - 32px));
+  box-sizing: border-box;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  animation: work-modal-enter 0.22s ease-out forwards;
+}
+.work-experience-card-modal-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--portfolio-back-card-bg);
+  transform: rotate(-3deg);
+  z-index: -1;
+  animation: work-modal-card-back-enter 0.34s cubic-bezier(0.2, 0.7, 0.2, 1)
+    forwards;
+}
+.work-experience-card-modal {
+  position: relative;
+  width: 100%;
+  max-height: 78vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid var(--portfolio-surface-border);
+  background: var(--portfolio-surface-bg);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.56),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: white;
+}
+.work-experience-card-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+.work-experience-card-modal-link {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  border: 1px solid var(--portfolio-surface-border);
+  border-radius: 999px;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  background: var(--portfolio-chip-bg);
+  box-shadow:
+    0 10px 20px rgba(6, 10, 18, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+.work-experience-card-modal-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--portfolio-surface-border-strong);
+  background: var(--portfolio-chip-bg-hover);
+  box-shadow:
+    0 14px 26px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(120, 230, 234, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.work-experience-card-modal h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+.work-experience-card-modal p {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.86;
+}
+.work-experience-card-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.work-experience-card-tech-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border: 1px solid var(--portfolio-surface-border);
+  border-radius: 999px;
+  background: var(--portfolio-chip-bg);
+  box-shadow:
+    0 8px 18px rgba(6, 10, 18, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  box-sizing: border-box;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(242, 246, 255, 0.96);
+}
+.work-experience-card-tech-list span:hover {
+  background: var(--portfolio-chip-bg-hover);
+}
+.work-experience-card-modal ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+.work-experience-card-modal li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+@keyframes work-modal-enter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes work-modal-backdrop-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes work-modal-card-back-enter {
+  from {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.94) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-3deg) scale(1) translateY(0);
+  }
+}
+@media screen and (max-width: 767px) {
+  .work-experience-card-modal-backdrop {
+    background: rgba(6, 10, 18, 0.46);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+  }
+  .work-experience-card-modal-shell {
+    top: 48%;
+    width: calc(100dvw - 20px);
+  }
+  .work-experience-card-modal {
+    max-height: 76dvh;
+    padding: 18px;
+    border-radius: 8px;
+  }
+  .work-experience-card-modal-shell::before {
+    border-radius: 8px;
+    transform: rotate(-2deg);
+    animation-name: work-modal-card-back-enter-mobile;
+  }
+  .work-experience-card-modal-header {
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+  .work-experience-card-modal-link {
+    padding: 6px 9px;
+    font-size: 0.68rem;
+  }
+  .work-experience-card-modal h2 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .work-experience-card-modal p {
+    font-size: 0.82rem;
+  }
+  .work-experience-card-tech-list {
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .work-experience-card-tech-list span {
+    min-height: 24px;
+    padding: 3px 8px;
+    font-size: 0.68rem;
+  }
+  .work-experience-card-modal ul {
+    margin-top: 14px;
+    padding-left: 17px;
+  }
+  .work-experience-card-modal li {
+    margin-bottom: 10px;
+    line-height: 1.42;
+  }
+}
+@keyframes work-modal-card-back-enter-mobile {
+  from {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-2deg) scale(1) translateY(0);
+  }
+}

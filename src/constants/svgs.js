@@ -158,6 +158,38 @@ function IconApi(props) {
     </svg>
   );
 }
+
+// icon:python | Simple Icons https://simpleicons.org | SimpleIcons.org
+
+function IconPython(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M11.999 0C10.915.005 9.881.098 8.973.26 6.296.735 5.81 1.73 5.81 3.565v2.69h6.326v.896H3.424C1.575 7.151 0 8.264 0 10.377v3.932c0 1.836 1.6 2.917 3.424 3.453 2.182.641 4.27.758 5.549.363 1.24-.383 2.163-1.153 2.163-2.988V12.88H4.81V11.98h9.489c1.76 0 3.325-1.059 3.325-3.426V4.623C17.624 1.784 15.2.678 12.626.25A18.018 18.018 0 0012 0zm-3.42 2.16c.655 0 1.185.544 1.185 1.214 0 .668-.53 1.207-1.185 1.207-.658 0-1.19-.54-1.19-1.207 0-.67.532-1.214 1.19-1.214zM12.865 7.151v2.257c0 1.75-1.495 3.225-3.892 3.225H2.647c-1.76 0-3.325 1.505-3.325 3.426v3.932c0 1.835 1.595 2.914 3.325 3.422 2.072.608 4.058.72 5.326.363 1.453-.42 2.892-1.266 2.892-3.024V18.39H4.54v-.896h9.487c1.848 0 3.424-1.189 3.424-3.424v-3.93c0-1.677-1.415-2.989-3.424-3.425-1.27-.275-2.588-.388-3.892-.364zm2.558 11.053c.658 0 1.191.541 1.191 1.208 0 .67-.533 1.214-1.191 1.214-.656 0-1.185-.544-1.185-1.214 0-.667.529-1.208 1.185-1.208z" />
+    </svg>
+  );
+}
+
+// icon:fastapi | Simple Icons https://simpleicons.org | SimpleIcons.org
+
+function IconFastapi(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M12.643.006 7.056 5.592v7.2h3.6v-5.758l1.988-1.987v12.53h-3.6l5.587 5.588L20.22 17.58v-7.2h-3.6v5.758l-1.976 1.977V5.585h3.6Z" />
+    </svg>
+  );
+}
 // icon:storybook | Simple Icons https://simpleicons.org | SimpleIcons.org
 
 function IconStorybook(props) {
@@ -178,12 +210,14 @@ export {
   IconApi,
   IconApollographql,
   IconAtlassian,
+  IconFastapi,
   IconBxlCss3,
   IconBxlRedux,
   IconBxlTailwindCss,
   IconGit,
   IconGithub,
   IconHtml5,
+  IconPython,
   IconReact,
   IconStorybook,
 };

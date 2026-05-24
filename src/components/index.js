@@ -5,6 +5,7 @@ import { default as Icon } from "./MultiPurposeIcon";
 import { default as CommonFooterAndHome } from "./CommonFooterAndHome";
 import { default as Alert } from "./Alert";
 import { default as WorkExperienceCard } from "./WorkExperienceCard";
+import { default as WorkExperienceModal } from "./WorkExperienceModal";
 import { default as WorkExp } from "./WorkExp";
 import { default as OuterLinkCard } from "./OuterLinkCard";
 import { default as CarouselInfiniteLoop } from "./CarouselInfiniteLoop";
@@ -22,6 +23,7 @@ export {
   CommonFooterAndHome,
   Alert,
   WorkExperienceCard,
+  WorkExperienceModal,
   WorkExp,
   OuterLinkCard,
   CarouselInfiniteLoop,

@@ -17,33 +17,32 @@ const About = () => {
     <div className="about-container">
       <div className="about-heading">
         <p>
-          Hi I am Manish. <br /> I am a React.js developer.
+          Hi, I'm Manish. <br /> I build frontend systems that perform.
         </p>
       </div>
       <div className="horizontal-line" />
       <div className="about-me">
         <h1>About</h1>
         <h2>
-          Hello! I'm Manish Chandra, a passionate React JS developer with 2+
-          years of hands-on experience in creating dynamic and user-friendly web
-          applications. My journey in the world of web development began with a
-          curiosity-driven desire to build interactive and responsive websites
-          that provide meaningful user experiences.
+          I am a results-driven Frontend Engineer with over 4 years of
+          experience building scalable, high-performance, and enterprise-grade
+          web and mobile applications using React, Next.js, React Native,
+          TypeScript, and modern frontend technologies.
         </h2>
         <h3>
-          Web development is an ever-evolving field, and I'm committed to
-          staying up-to-date with the latest trends and technologies. I enjoy
-          exploring new libraries and tools that can enhance my development
-          skills and make my projects more efficient and robust. Continuous
-          learning is a core part of my journey as a developer.
+          I specialize in designing real-time, low-latency systems,
+          interactive dashboards, data visualizations, and performance-driven
+          frontend architectures with a strong focus on maintainability and user
+          experience.
         </h3>
         <h3>
-          What excites me most about web development is the opportunity to solve
-          real-world problems through creative and elegant solutions. I'm driven
-          by the desire to create web applications that not only meet the
-          functional requirements but also provide an exceptional user
-          experience. I thrive on challenges and love to think critically to
-          overcome obstacles.
+          My experience includes developing reusable component systems,
+          internal platforms, live inference applications, and workflow
+          automation that significantly improves development efficiency. I
+          thrive in cross-functional environments, combining strong
+          problem-solving ability with technical depth to deliver secure,
+          responsive, and user-centric solutions that create measurable
+          business impact.
         </h3>
       </div>
       <div ref={styleSectionRef} className="about-skills">

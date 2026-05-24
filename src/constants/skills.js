@@ -4,9 +4,11 @@ import {
   IconBxlCss3,
   IconBxlRedux,
   IconBxlTailwindCss,
+  IconFastapi,
   IconGit,
   IconGithub,
   IconHtml5,
+  IconPython,
   IconReact,
   IconStorybook,
   IconApi,
@@ -55,5 +57,13 @@ export const skills = [
   {
     name: "REST api",
     Icon: IconApi,
+  },
+  {
+    name: "Python",
+    Icon: IconPython,
+  },
+  {
+    name: "FastAPI",
+    Icon: IconFastapi,
   },
 ];

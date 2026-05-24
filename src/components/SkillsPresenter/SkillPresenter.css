@@ -1,16 +1,33 @@
-.skill-presenter-container{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 2rem;
+.skill-presenter-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.skill-pill-container{
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.2rem;
+.skill-pill-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(244, 248, 255, 0.96);
 }
 .skill-pill-container > div {
-    margin-right: 10px;
-    display: flex;
+  display: flex;
+  align-items: center;
+}
+.skill-pill-container > div:first-child {
+  color: rgba(120, 230, 234, 0.94);
+  font-size: 1.08rem;
+  filter: drop-shadow(0 0 10px rgba(93, 224, 230, 0.16));
+}
+@media screen and (max-width: 767px) {
+  .skill-presenter-container {
+    gap: 0.8rem;
+  }
+  .skill-pill-container {
+    font-size: 0.92rem;
+    gap: 8px;
+  }
 }

@@ -1,3 +1,99 @@
+:root {
+  --scrollbar-size: 8px;
+  --scrollbar-track: rgba(255, 255, 255, 0.06);
+  --scrollbar-thumb: rgba(175, 180, 188, 0.72);
+  --scrollbar-thumb-hover: rgba(205, 210, 218, 0.86);
+  --portfolio-accent-cyan: rgba(110, 255, 225, 0.28);
+  --portfolio-accent-violet: rgba(158, 118, 255, 0.24);
+  --portfolio-accent-amber: rgba(255, 206, 112, 0.2);
+  --portfolio-surface-bg:
+    radial-gradient(circle at 14% 18%, var(--portfolio-accent-cyan), transparent 34%),
+    radial-gradient(circle at 78% 18%, var(--portfolio-accent-violet), transparent 32%),
+    radial-gradient(circle at 84% 80%, var(--portfolio-accent-amber), transparent 30%),
+    linear-gradient(145deg, #141c30 0%, #23385c 55%, #294e67 100%);
+  --portfolio-surface-bg-hover:
+    radial-gradient(circle at 16% 18%, rgba(129, 255, 229, 0.34), transparent 36%),
+    radial-gradient(circle at 80% 20%, rgba(174, 137, 255, 0.3), transparent 34%),
+    radial-gradient(circle at 84% 80%, rgba(255, 214, 128, 0.24), transparent 32%),
+    linear-gradient(135deg, #1d2950 8%, #305882 54%, #46617c 100%);
+  --portfolio-back-card-bg:
+    radial-gradient(circle at 16% 18%, rgba(255, 117, 172, 0.34), transparent 34%),
+    radial-gradient(circle at 82% 22%, rgba(255, 208, 102, 0.3), transparent 32%),
+    radial-gradient(circle at 50% 84%, rgba(145, 110, 255, 0.26), transparent 32%),
+    linear-gradient(135deg, #4d1f56 6%, #8d3f68 46%, #d18b44 100%);
+  --portfolio-pill-bg:
+    radial-gradient(circle at 16% 18%, rgba(255, 128, 182, 0.32), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(190, 148, 255, 0.28), transparent 32%),
+    radial-gradient(circle at 84% 82%, rgba(255, 214, 128, 0.26), transparent 30%),
+    linear-gradient(145deg, #55255d 4%, #93456d 48%, #d18a48 100%);
+  --portfolio-pill-bg-hover:
+    radial-gradient(circle at 14% 16%, rgba(255, 145, 192, 0.4), transparent 36%),
+    radial-gradient(circle at 80% 18%, rgba(205, 166, 255, 0.34), transparent 34%),
+    radial-gradient(circle at 84% 82%, rgba(255, 226, 149, 0.3), transparent 32%),
+    linear-gradient(145deg, #662d71 0%, #a14b77 50%, #e19a54 100%);
+  --portfolio-surface-border: rgba(171, 217, 255, 0.26);
+  --portfolio-surface-border-strong: rgba(197, 232, 255, 0.58);
+  --portfolio-chip-bg:
+    radial-gradient(circle at 18% 18%, rgba(255, 129, 183, 0.2), transparent 34%),
+    radial-gradient(circle at 82% 20%, rgba(187, 146, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 84% 82%, rgba(255, 214, 128, 0.14), transparent 28%),
+    linear-gradient(145deg, rgba(72, 33, 80, 0.98), rgba(108, 56, 98, 0.94));
+  --portfolio-chip-bg-hover:
+    radial-gradient(circle at 18% 18%, rgba(255, 146, 193, 0.26), transparent 34%),
+    radial-gradient(circle at 82% 20%, rgba(200, 162, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 84% 82%, rgba(255, 224, 145, 0.18), transparent 30%),
+    linear-gradient(145deg, rgba(86, 40, 94, 0.98), rgba(126, 64, 112, 0.96));
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body,
+.page-content,
+.work-experience-card-modal {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+body::-webkit-scrollbar,
+.page-content::-webkit-scrollbar,
+.work-experience-card-modal::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+body::-webkit-scrollbar-track,
+.page-content::-webkit-scrollbar-track,
+.work-experience-card-modal::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 999px;
+}
+
+body::-webkit-scrollbar-thumb,
+.page-content::-webkit-scrollbar-thumb,
+.work-experience-card-modal::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.page-content::-webkit-scrollbar-thumb:hover,
+.work-experience-card-modal::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+body::-webkit-scrollbar-corner,
+.page-content::-webkit-scrollbar-corner,
+.work-experience-card-modal::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,7 +103,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 code {
@@ -133,6 +230,9 @@ code {
   }
 }
 @media screen and (max-width: 767px) {
+  :root {
+    --scrollbar-size: 6px;
+  }
   .hide-mobile {
     display: block !important;
   }
