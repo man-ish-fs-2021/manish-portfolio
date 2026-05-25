@@ -1,0 +1,29 @@
+.work-page-main-container {
+  display: flex;
+  flex-direction: column;
+}
+.work-page-main-container > div {
+  animation: fade-in-from-bottom cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s
+    forwards;
+}
+.work-previous {
+  margin-top: 10%;
+}
+.work-experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch;
+}
+.work-heading {
+  font-weight: bolder;
+  font-size: 4rem;
+}
+@media screen and (max-width: 767px) {
+  .work-experience-list {
+    flex-direction: column;
+  }
+  .work-heading {
+    font-size: 3rem;
+  }
+}

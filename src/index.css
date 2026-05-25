@@ -1,0 +1,271 @@
+:root {
+  --scrollbar-size: 8px;
+  --scrollbar-track: rgba(255, 255, 255, 0.02);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.16);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.32);
+
+  /* Core Triad Accent Colors */
+  --color-primary: #14f7e2;        /* Radiant Neon Cyan */
+  --color-secondary: #a25df5;      /* Majestic Neon Violet */
+  --color-tertiary: #ff6584;       /* Energetic Neon Coral-Pink */
+
+  /* Triad Glow Highlights */
+  --portfolio-accent-cyan: rgba(20, 247, 226, 0.24);
+  --portfolio-accent-violet: rgba(162, 93, 245, 0.22);
+  --portfolio-accent-tertiary: rgba(255, 101, 132, 0.18);
+
+  /* Surface Cards (Work Experience, Project Cards, Modals) */
+  --portfolio-surface-bg:
+    radial-gradient(circle at 14% 18%, var(--portfolio-accent-cyan), transparent 34%),
+    radial-gradient(circle at 78% 18%, var(--portfolio-accent-violet), transparent 32%),
+    radial-gradient(circle at 84% 80%, var(--portfolio-accent-tertiary), transparent 30%),
+    linear-gradient(145deg, #0f1524 0%, #1e2842 55%, #17384d 100%);
+
+  --portfolio-surface-bg-hover:
+    radial-gradient(circle at 16% 18%, rgba(20, 247, 226, 0.32), transparent 36%),
+    radial-gradient(circle at 80% 20%, rgba(162, 93, 245, 0.28), transparent 34%),
+    radial-gradient(circle at 84% 80%, rgba(255, 101, 132, 0.24), transparent 32%),
+    linear-gradient(135deg, #172036 8%, #2a385c 54%, #204c68 100%);
+
+  /* Pinned/Hovered Backplate Seam Halo - High Contrast & Saturated Triad */
+  --portfolio-back-card-bg: linear-gradient(
+    135deg,
+    #14f7e2 0%,
+    #a25df5 50%,
+    #ff6584 100%
+  );
+
+  /* Project Pills & About Skills Pills - Smooth Multi-Spotlight Radial Gradients */
+  --portfolio-pill-bg:
+    radial-gradient(circle at 16% 18%, rgba(20, 247, 226, 0.3), transparent 45%),
+    radial-gradient(circle at 84% 82%, rgba(255, 101, 132, 0.24), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(162, 93, 245, 0.14), transparent 50%),
+    linear-gradient(145deg, #161e30 4%, #202d4b 48%, #1b384a 100%);
+
+  --portfolio-pill-bg-hover:
+    radial-gradient(circle at 16% 18%, rgba(20, 247, 226, 0.45), transparent 45%),
+    radial-gradient(circle at 84% 82%, rgba(255, 101, 132, 0.36), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(162, 93, 245, 0.22), transparent 50%),
+    linear-gradient(145deg, #1e2840 0%, #293b62 50%, #20475f 100%);
+
+  --portfolio-surface-border: rgba(20, 247, 226, 0.34);
+  --portfolio-surface-border-strong: rgba(20, 247, 226, 0.88);
+
+  /* Modal Tech Stack Chips - Inheriting the same vibrant angular triad gradient */
+  --portfolio-chip-bg: var(--portfolio-pill-bg);
+  --portfolio-chip-bg-hover: var(--portfolio-pill-bg-hover);
+
+  /* External Link Arrow Circles - Centralized variables mapped to the main pill style */
+  --portfolio-arrow-bg: var(--portfolio-pill-bg);
+  --portfolio-arrow-bg-hover: var(--portfolio-pill-bg-hover);
+  --portfolio-arrow-border: var(--portfolio-surface-border);
+  --portfolio-arrow-border-strong: var(--portfolio-surface-border-strong);
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body,
+.page-content,
+.work-experience-card-modal {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+body::-webkit-scrollbar,
+.page-content::-webkit-scrollbar,
+.work-experience-card-modal::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+body::-webkit-scrollbar-track,
+.page-content::-webkit-scrollbar-track,
+.work-experience-card-modal::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 999px;
+}
+
+body::-webkit-scrollbar-thumb,
+.page-content::-webkit-scrollbar-thumb,
+.work-experience-card-modal::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.page-content::-webkit-scrollbar-thumb:hover,
+.work-experience-card-modal::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+body::-webkit-scrollbar-corner,
+.page-content::-webkit-scrollbar-corner,
+.work-experience-card-modal::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.fade-in-about {
+  animation: fade-in-from-bottom cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.9s
+    forwards;
+}
+.hr-line-70 {
+  width: 70%;
+  border: 1px solid white;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade-in-from-bottom-mobile {
+  from {
+    transform: translateY(20vh);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.page-inner-container {
+  max-width: 70%;
+  margin: 0 auto;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.page-inner-container > div {
+  width: 70%;
+  /* text-align: justify; */
+}
+.arrow {
+  width: 100px;
+  height: 100px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  bottom: -15px;
+  margin: 0 auto;
+  animation: ArrowbobbingAbsolute 2s linear infinite;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.down {
+  transform: scaleY(cos(45deg)) rotate(45deg);
+}
+.hide-mobile {
+  display: none !important;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes Arrowbobbing {
+  0% {
+    transform: translateY(10px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes ArrowbobbingAbsolute {
+  0% {
+    bottom: -5px;
+  }
+  25% {
+    bottom: -10px;
+  }
+  50% {
+    bottom: -15px;
+  }
+  75% {
+    bottom: -10px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --scrollbar-size: 6px;
+  }
+  .hide-mobile {
+    display: block !important;
+  }
+  .page-inner-container {
+    width: 86%;
+    max-width: 90%;
+  }
+  .page-inner-container > div {
+    width: 100%;
+    /* text-align: justify; */
+  }
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
+  .hr-line-70 {
+    width: 100%;
+  }
+}

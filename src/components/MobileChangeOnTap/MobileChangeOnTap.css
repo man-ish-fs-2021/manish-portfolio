@@ -1,0 +1,18 @@
+.on-tap-text {
+  /* transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1); */
+  font-size: 4rem;
+  color: white;
+  margin: 0;
+  width: max-content;
+  overflow: hidden;
+}
+.on-tap-text h1 {
+  animation: fade-in-from-bottom-mobile 0.4s;
+
+  text-shadow: 0 0 50px #000;
+  margin: 0;
+}
+.on-tap-text a {
+  text-decoration: none;
+  color: inherit;
+}

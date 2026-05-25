@@ -1,0 +1,20 @@
+.infinite-loop-carousel-outer {
+  width: 100%;
+  min-height: 150px;
+  overflow: hidden;
+}
+.infinite-loop-carousel {
+  display: flex;
+  gap: 20px;
+  width: calc(370px * 10);
+  min-height: 150px;
+  animation: scrolling 40s linear infinite;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 5));
+  }
+}

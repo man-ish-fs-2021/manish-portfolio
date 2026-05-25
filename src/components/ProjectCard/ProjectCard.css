@@ -1,0 +1,84 @@
+.project-pill {
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+  background: var(--portfolio-pill-bg);
+  border: 1px solid var(--portfolio-surface-border);
+  border-radius: 58px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  box-shadow:
+    0 12px 28px rgba(6, 10, 18, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease,
+    background 0.24s ease;
+}
+
+.project-pill::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.project-pill:hover,
+.project-pill:focus-visible {
+  transform: translateY(-2px) scale(1.015);
+  border-color: var(--portfolio-surface-border-strong);
+  box-shadow:
+    0 18px 34px rgba(6, 10, 18, 0.32),
+    0 0 0 1px rgba(126, 223, 231, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: var(--portfolio-pill-bg-hover);
+}
+.project-pill.sm {
+  height: 44px;
+  width: 200px;
+  font-size: 0.76rem;
+  border-radius: 44px;
+}
+.project-pill.md {
+  height: 50px;
+  width: 250px;
+  font-size: 0.8rem;
+  border-radius: 58px;
+}
+.project-pill.lg {
+  height: 60px;
+  width: 300px;
+  font-size: 0.95rem;
+  border-radius: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .project-pill {
+    width: calc(50% - 0.4rem) !important;
+    box-sizing: border-box;
+  }
+  .project-pill.sm {
+    height: 40px;
+    padding: 0 6px;
+  }
+  .project-pill.md {
+    height: 46px;
+    padding: 0 10px;
+  }
+  .project-pill.lg {
+    height: 52px;
+    padding: 0 14px;
+  }
+}

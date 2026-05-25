@@ -1,0 +1,7 @@
+.project-container-collection {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}

@@ -1,0 +1,49 @@
+.outer-link-card-main-arrow {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
+  transform: scale(0.85);
+  z-index: 10;
+}
+.outer-link-card-main-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: var(--portfolio-arrow-bg);
+  border: 1px solid var(--portfolio-arrow-border);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.outer-link-card-main-arrow-container img {
+  height: 44%;
+  width: 44%;
+  filter: drop-shadow(0 0 4px rgba(20, 247, 226, 0.4));
+  transition: transform 0.3s ease;
+}
+.img-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.outer-link-card-main-arrow:hover .outer-link-card-main-arrow-container {
+  transform: scale(1.08);
+  border-color: var(--portfolio-arrow-border-strong);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.46),
+    0 0 12px rgba(20, 247, 226, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: var(--portfolio-arrow-bg-hover);
+}
+.outer-link-card-main-arrow:hover img {
+  transform: scale(1.05) translate(1px, -1px);
+}

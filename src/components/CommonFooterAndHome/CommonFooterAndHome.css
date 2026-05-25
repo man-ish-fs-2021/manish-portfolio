@@ -1,0 +1,30 @@
+.common-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/denimBg.webp");
+  background-repeat: repeat;
+
+  position: relative;
+}
+.page-content {
+  height: calc(100% - 60px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
+}
+.home-icon {
+  position: fixed;
+  top: 10%;
+  /* transform: translate(-40px); */
+  /* height: 13%; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  right: 10%;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  .home-icon:first-child {
+    display: none;
+  }
+}
