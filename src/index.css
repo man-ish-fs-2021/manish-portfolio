@@ -1,48 +1,65 @@
 :root {
   --scrollbar-size: 8px;
-  --scrollbar-track: rgba(255, 255, 255, 0.06);
-  --scrollbar-thumb: rgba(175, 180, 188, 0.72);
-  --scrollbar-thumb-hover: rgba(205, 210, 218, 0.86);
-  --portfolio-accent-cyan: rgba(110, 255, 225, 0.28);
-  --portfolio-accent-violet: rgba(158, 118, 255, 0.24);
-  --portfolio-accent-amber: rgba(255, 206, 112, 0.2);
+  --scrollbar-track: rgba(255, 255, 255, 0.02);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.16);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.32);
+
+  /* Core Triad Accent Colors */
+  --color-primary: #14f7e2;        /* Radiant Neon Cyan */
+  --color-secondary: #a25df5;      /* Majestic Neon Violet */
+  --color-tertiary: #ff6584;       /* Energetic Neon Coral-Pink */
+
+  /* Triad Glow Highlights */
+  --portfolio-accent-cyan: rgba(20, 247, 226, 0.24);
+  --portfolio-accent-violet: rgba(162, 93, 245, 0.22);
+  --portfolio-accent-tertiary: rgba(255, 101, 132, 0.18);
+
+  /* Surface Cards (Work Experience, Project Cards, Modals) */
   --portfolio-surface-bg:
     radial-gradient(circle at 14% 18%, var(--portfolio-accent-cyan), transparent 34%),
     radial-gradient(circle at 78% 18%, var(--portfolio-accent-violet), transparent 32%),
-    radial-gradient(circle at 84% 80%, var(--portfolio-accent-amber), transparent 30%),
-    linear-gradient(145deg, #141c30 0%, #23385c 55%, #294e67 100%);
+    radial-gradient(circle at 84% 80%, var(--portfolio-accent-tertiary), transparent 30%),
+    linear-gradient(145deg, #0f1524 0%, #1e2842 55%, #17384d 100%);
+
   --portfolio-surface-bg-hover:
-    radial-gradient(circle at 16% 18%, rgba(129, 255, 229, 0.34), transparent 36%),
-    radial-gradient(circle at 80% 20%, rgba(174, 137, 255, 0.3), transparent 34%),
-    radial-gradient(circle at 84% 80%, rgba(255, 214, 128, 0.24), transparent 32%),
-    linear-gradient(135deg, #1d2950 8%, #305882 54%, #46617c 100%);
-  --portfolio-back-card-bg:
-    radial-gradient(circle at 16% 18%, rgba(255, 117, 172, 0.34), transparent 34%),
-    radial-gradient(circle at 82% 22%, rgba(255, 208, 102, 0.3), transparent 32%),
-    radial-gradient(circle at 50% 84%, rgba(145, 110, 255, 0.26), transparent 32%),
-    linear-gradient(135deg, #4d1f56 6%, #8d3f68 46%, #d18b44 100%);
+    radial-gradient(circle at 16% 18%, rgba(20, 247, 226, 0.32), transparent 36%),
+    radial-gradient(circle at 80% 20%, rgba(162, 93, 245, 0.28), transparent 34%),
+    radial-gradient(circle at 84% 80%, rgba(255, 101, 132, 0.24), transparent 32%),
+    linear-gradient(135deg, #172036 8%, #2a385c 54%, #204c68 100%);
+
+  /* Pinned/Hovered Backplate Seam Halo - High Contrast & Saturated Triad */
+  --portfolio-back-card-bg: linear-gradient(
+    135deg,
+    #14f7e2 0%,
+    #a25df5 50%,
+    #ff6584 100%
+  );
+
+  /* Project Pills & About Skills Pills - Smooth Multi-Spotlight Radial Gradients */
   --portfolio-pill-bg:
-    radial-gradient(circle at 16% 18%, rgba(255, 128, 182, 0.32), transparent 34%),
-    radial-gradient(circle at 82% 18%, rgba(190, 148, 255, 0.28), transparent 32%),
-    radial-gradient(circle at 84% 82%, rgba(255, 214, 128, 0.26), transparent 30%),
-    linear-gradient(145deg, #55255d 4%, #93456d 48%, #d18a48 100%);
+    radial-gradient(circle at 16% 18%, rgba(20, 247, 226, 0.3), transparent 45%),
+    radial-gradient(circle at 84% 82%, rgba(255, 101, 132, 0.24), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(162, 93, 245, 0.14), transparent 50%),
+    linear-gradient(145deg, #161e30 4%, #202d4b 48%, #1b384a 100%);
+
   --portfolio-pill-bg-hover:
-    radial-gradient(circle at 14% 16%, rgba(255, 145, 192, 0.4), transparent 36%),
-    radial-gradient(circle at 80% 18%, rgba(205, 166, 255, 0.34), transparent 34%),
-    radial-gradient(circle at 84% 82%, rgba(255, 226, 149, 0.3), transparent 32%),
-    linear-gradient(145deg, #662d71 0%, #a14b77 50%, #e19a54 100%);
-  --portfolio-surface-border: rgba(171, 217, 255, 0.26);
-  --portfolio-surface-border-strong: rgba(197, 232, 255, 0.58);
-  --portfolio-chip-bg:
-    radial-gradient(circle at 18% 18%, rgba(255, 129, 183, 0.2), transparent 34%),
-    radial-gradient(circle at 82% 20%, rgba(187, 146, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 84% 82%, rgba(255, 214, 128, 0.14), transparent 28%),
-    linear-gradient(145deg, rgba(72, 33, 80, 0.98), rgba(108, 56, 98, 0.94));
-  --portfolio-chip-bg-hover:
-    radial-gradient(circle at 18% 18%, rgba(255, 146, 193, 0.26), transparent 34%),
-    radial-gradient(circle at 82% 20%, rgba(200, 162, 255, 0.22), transparent 32%),
-    radial-gradient(circle at 84% 82%, rgba(255, 224, 145, 0.18), transparent 30%),
-    linear-gradient(145deg, rgba(86, 40, 94, 0.98), rgba(126, 64, 112, 0.96));
+    radial-gradient(circle at 16% 18%, rgba(20, 247, 226, 0.45), transparent 45%),
+    radial-gradient(circle at 84% 82%, rgba(255, 101, 132, 0.36), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(162, 93, 245, 0.22), transparent 50%),
+    linear-gradient(145deg, #1e2840 0%, #293b62 50%, #20475f 100%);
+
+  --portfolio-surface-border: rgba(20, 247, 226, 0.34);
+  --portfolio-surface-border-strong: rgba(20, 247, 226, 0.88);
+
+  /* Modal Tech Stack Chips - Inheriting the same vibrant angular triad gradient */
+  --portfolio-chip-bg: var(--portfolio-pill-bg);
+  --portfolio-chip-bg-hover: var(--portfolio-pill-bg-hover);
+
+  /* External Link Arrow Circles - Centralized variables mapped to the main pill style */
+  --portfolio-arrow-bg: var(--portfolio-pill-bg);
+  --portfolio-arrow-bg-hover: var(--portfolio-pill-bg-hover);
+  --portfolio-arrow-border: var(--portfolio-surface-border);
+  --portfolio-arrow-border-strong: var(--portfolio-surface-border-strong);
 }
 
 html,

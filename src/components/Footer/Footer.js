@@ -5,7 +5,7 @@ import Mail from "../../assets/mail.svg";
 import li from "../../assets/linkedin.svg";
 import gi from "../../assets/github.svg";
 import file from "../../assets/file-text.svg";
-import Resume from "../../assets/Resume-Manish Chandra.pdf";
+import Resume from "../../assets/ManishChandra-FrontendDeveloper.pdf";
 import { Alert } from "../";
 // import { REACT_APP_EMAIL } from "../../../../.env";
 

@@ -15,7 +15,7 @@ const CommonFooterAndHome = ({ children }) => {
         <TextShiftOnHover
           main="Home"
           after={
-            <AnchorStyled href="/manish-portfolio/#/" hoverColor="#76C3C5">
+            <AnchorStyled href="/manish-portfolio/#/" hoverColor="var(--color-primary)">
               Home
             </AnchorStyled>
           }

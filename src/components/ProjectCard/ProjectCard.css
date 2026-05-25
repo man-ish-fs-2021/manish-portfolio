@@ -45,8 +45,40 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
   background: var(--portfolio-pill-bg-hover);
 }
+.project-pill.sm {
+  height: 44px;
+  width: 200px;
+  font-size: 0.76rem;
+  border-radius: 44px;
+}
+.project-pill.md {
+  height: 50px;
+  width: 250px;
+  font-size: 0.8rem;
+  border-radius: 58px;
+}
+.project-pill.lg {
+  height: 60px;
+  width: 300px;
+  font-size: 0.95rem;
+  border-radius: 70px;
+}
+
 @media screen and (max-width: 767px) {
   .project-pill {
-    width: 100%;
+    width: calc(50% - 0.4rem) !important;
+    box-sizing: border-box;
+  }
+  .project-pill.sm {
+    height: 40px;
+    padding: 0 6px;
+  }
+  .project-pill.md {
+    height: 46px;
+    padding: 0 10px;
+  }
+  .project-pill.lg {
+    height: 52px;
+    padding: 0 14px;
   }
 }

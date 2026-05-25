@@ -15,9 +15,12 @@ const SkillPill = ({ name, Icon }) => {
 const SkillsPresenter = () => {
   return (
     <div className="skill-presenter-container">
-      {" "}
       {skills.map(({ Icon, name }) => {
-        return <ProjectPill name={<SkillPill Icon={Icon} name={name} />} />;
+        return (
+          <ProjectPill key={name} size="sm">
+            <SkillPill Icon={Icon} name={name} />
+          </ProjectPill>
+        );
       })}
     </div>
   );

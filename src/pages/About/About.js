@@ -1,16 +1,14 @@
 import React, { useRef } from "react";
 import "./About.css";
 import { useIsIntersectingAnimation } from "../../hooks";
-import { AnchorStyled, SkillsPresenter } from "../../components";
-import Resume from "../../assets/Resume-Manish Chandra.pdf";
+import { SkillsPresenter } from "../../components";
 
 const About = () => {
   const styleSectionRef = useRef(null);
-  const aboutSectionRef = useRef(null);
   const styleSectionRef2 = useRef(null);
   useIsIntersectingAnimation({
     mainRef: styleSectionRef,
-    allRefs: [styleSectionRef, aboutSectionRef, styleSectionRef2],
+    allRefs: [styleSectionRef, styleSectionRef2],
     classToAdd: "fade-in-about",
   });
   return (
@@ -66,6 +64,15 @@ const About = () => {
               Understanding of UI libraries and UX flows through collaborations
             </li>
             <li>
+              Pioneered <strong>AI-driven developer workflows</strong>, leveraging Agentic AI platforms and LLMs to accelerate feature shipping
+            </li>
+            <li>
+              Expertise in integrating <strong>Model Context Protocol (MCP)</strong> environments to automate code generation, UI rendering pipelines, and asset optimization
+            </li>
+            <li>
+              Proven track record of driving <strong>efficiency improvements</strong>, reducing manual UI turnaround times by up to 80% using custom developer tools
+            </li>
+            <li>
               Knowledge of security measures like RBAC, fine grain permission
               control and JWT tokens.
             </li>
@@ -86,18 +93,6 @@ const About = () => {
               Agile development methodologies and collaborative problem-solving
             </li>
           </ul>
-        </h2>
-      </div>
-      <div ref={aboutSectionRef} className="about-resume">
-        <h2>
-          <AnchorStyled
-            color="#c57876"
-            hoverColor="rgba(118, 195, 197, 1)"
-            href={Resume}
-            target="_blank"
-          >
-            My resume
-          </AnchorStyled>
         </h2>
       </div>
     </div>

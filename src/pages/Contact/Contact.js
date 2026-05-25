@@ -48,13 +48,13 @@ const Contact = () => {
       <div ref={contactItems} className="contact-items">
         <TextShiftOnHover
           main="Email"
-          color="#c57876"
+          color="var(--color-tertiary)"
           after={
             <AnchorStyled
               target=""
               color="white"
               // href="/about"
-              hoverColor="#76C3C5"
+              hoverColor="var(--color-primary)"
               onClick={() => {
                 navigator.clipboard.writeText(REACT_APP_EMAIL).then(
                   () => {
@@ -79,11 +79,11 @@ const Contact = () => {
         />
         <TextShiftOnHover
           main="LinkedIn"
-          color="#c57876"
+          color="var(--color-tertiary)"
           after={
             <AnchorStyled
               href="https://www.linkedin.com/in/manish-chandra-320b2420b/"
-              hoverColor="#76C3C5"
+              hoverColor="var(--color-primary)"
               target="_blank"
             >
               LinkedIn
@@ -93,11 +93,11 @@ const Contact = () => {
         />
         <TextShiftOnHover
           main="Github"
-          color="#c57876"
+          color="var(--color-tertiary)"
           after={
             <AnchorStyled
               href="https://github.com/man-ish-fs-2021"
-              hoverColor="#76C3C5"
+              hoverColor="var(--color-primary)"
               target="_blank"
             >
               Github

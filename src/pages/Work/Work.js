@@ -18,7 +18,7 @@ const switchOnDetails = [
   "Designed scalable RBAC and ABAC permission models for secure, flexible access management.",
   "Built React Native features for mobile video capture, live streaming, and real-time inference result visualization.",
   "Introduced an MCP-powered Figma-to-development workflow that reduced UI implementation turnaround by approximately 80%.",
-  "Used MCP integrations and Chrome DevTools automation to optimize frontend assets and reduce application build size to approximately 2 MB.",
+  "Used MCP integrations and Chrome DevTools automation to optimize frontend assets and reduce application build size by approximately 80%.",
   "Led the migration to Electron, enabling cross-platform desktop support while preserving a scalable frontend architecture.",
   "Improved responsiveness for large datasets and touch-first interfaces through state management and rendering optimizations.",
 ];

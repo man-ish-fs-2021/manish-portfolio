@@ -1,8 +1,18 @@
 import React from "react";
-
 import "./ProjectCard.css";
 
-const ProjectCard = ({ name, link }) => {
+const ProjectCard = ({
+  name,
+  link,
+  size = "md",
+  width,
+  height,
+  fontSize,
+  padding,
+  className = "",
+  style = {},
+  children,
+}) => {
   return (
     <div
       onClick={() => {
@@ -10,9 +20,16 @@ const ProjectCard = ({ name, link }) => {
         const win = window.open(link, "_blank");
         win.focus();
       }}
-      className="project-pill"
+      className={`project-pill ${size} ${className}`}
+      style={{
+        width,
+        height,
+        fontSize,
+        padding,
+        ...style,
+      }}
     >
-      {name}
+      {children || name}
     </div>
   );
 };

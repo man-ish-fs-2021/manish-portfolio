@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { AnchorStyled } from "../../components";
+import { AnchorStyled, Footer } from "../../components";
 
 const Home = () => {
   return (
@@ -23,21 +23,21 @@ const Home = () => {
               </p>
             </div>
             <div className="home-signal-row">
-              <span>4+ years</span>
-              <span>React + TypeScript</span>
-              <span>Web, Mobile, Desktop</span>
+              <span>React • TypeScript • Next.js</span>
+              <span>Web • Mobile • Desktop</span>
+              <span>High-Performance UI</span>
             </div>
             <div className="home-link-row">
               <AnchorStyled color="white" href="#/about" hoverColor="white">
                 About
               </AnchorStyled>
-              <AnchorStyled color="#76C3C5" href="#/work" hoverColor="#76C3C5">
+              <AnchorStyled color="var(--color-primary)" href="#/work" hoverColor="var(--color-primary)">
                 Work
               </AnchorStyled>
               <AnchorStyled
-                color="#c57876"
+                color="var(--color-tertiary)"
                 href="#/contact"
-                hoverColor="#c57876"
+                hoverColor="var(--color-tertiary)"
               >
                 Contact
               </AnchorStyled>
@@ -58,23 +58,24 @@ const Home = () => {
             dependable user experience across platforms.
           </p>
         </div>
+        <div className="home-signal-row home-signal-row-mobile">
+          <span>React • TypeScript • Next.js</span>
+          <span>Web • Mobile • Desktop</span>
+          <span>High-Performance UI</span>
+        </div>
         <div className="home-mobile-links">
           <AnchorStyled color="white" href="#/about" hoverColor="white">
             About
           </AnchorStyled>
-          <AnchorStyled color="#76C3C5" href="#/work" hoverColor="#76C3C5">
+          <AnchorStyled color="var(--color-primary)" href="#/work" hoverColor="var(--color-primary)">
             Work
           </AnchorStyled>
-          <AnchorStyled color="#c57876" href="#/contact" hoverColor="#c57876">
+          <AnchorStyled color="var(--color-tertiary)" href="#/contact" hoverColor="var(--color-tertiary)">
             Contact
           </AnchorStyled>
         </div>
-        <div className="home-signal-row home-signal-row-mobile">
-          <span>4+ years</span>
-          <span>Real-time UI</span>
-          <span>React ecosystem</span>
-        </div>
       </div>
+      <Footer />
     </div>
   );
 };

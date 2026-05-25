@@ -27,7 +27,10 @@
     gap: 0.8rem;
   }
   .skill-pill-container {
-    font-size: 0.92rem;
-    gap: 8px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+  .skill-pill-container > div:first-child {
+    font-size: 0.96rem;
   }
 }
